@@ -11,8 +11,20 @@
     'use strict';
 
     const dateMatch = window.location.pathname.match(/\/play\/(\d{4}-\d{2}-\d{2})/);
-    const targetDate = dateMatch ? dateMatch[1] : new Date().toISOString().split('T')[0];
-    const level = window.__DAILY_LEVELS__.find(l => l.date === targetDate);
+    console.log("Date from URL: "+dateMatch)
+    let level = null;
+    if (dateMatch){
+        const targetDate = dateMatch ? dateMatch[1] : new Date().toISOString().split('T')[0];
+        console.log("Target Date: "+targetDate);
+        level = window.__DAILY_LEVELS__.find(l => l.date === targetDate);
+    } else {
+        // yyyy-mm-dd
+        const today = new Date().toISOString().split('T')[0]
+        console.log("Today's date: "+today);
+        level = window.__DAILY_LEVELS__.find(l => l.date === today);
+    }
+    console.log("Level info:");
+    console.log(level);
 
     if (level) {
         const div = document.createElement('div');
