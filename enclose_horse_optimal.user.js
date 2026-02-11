@@ -9,7 +9,6 @@
 
 (function() {
     'use strict';
-
     const dateMatch = window.location.pathname.match(/\/play\/(\d{4}-\d{2}-\d{2})/);
     console.log("Date from URL: "+dateMatch)
     let level = null;
@@ -19,7 +18,7 @@
         level = window.__DAILY_LEVELS__.find(l => l.date === targetDate);
     } else {
         // yyyy-mm-dd
-        const today = new Date().toISOString().split('T')[0]
+        const today = new Date().toLocaleString('sv').split(" ")[0];
         console.log("Today's date: "+today);
         level = window.__DAILY_LEVELS__.find(l => l.date === today);
     }
