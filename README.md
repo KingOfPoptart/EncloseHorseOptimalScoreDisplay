@@ -6,4 +6,11 @@ Install this as a TamperMonkey script and the optimal score for the current puzz
 
 Works for all bonus round types (lovebirds, costlywalls, etc.).
 
+## Testing
+
+```
+npm install
+npm test
+```
+
 GLHF.
