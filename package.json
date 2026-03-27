@@ -1,0 +1,24 @@
+{
+  "name": "enclosehorseoptimalscoredisplay",
+  "version": "1.0.0",
+  "description": "https://enclose.horse/ is a good game.",
+  "main": "enclose_horse_optimal.user.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingOfPoptart/EncloseHorseOptimalScoreDisplay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KingOfPoptart/EncloseHorseOptimalScoreDisplay/issues"
+  },
+  "homepage": "https://github.com/KingOfPoptart/EncloseHorseOptimalScoreDisplay#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
